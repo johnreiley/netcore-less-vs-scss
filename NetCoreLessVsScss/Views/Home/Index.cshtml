@@ -1,0 +1,509 @@
+﻿@model NetCoreLessVsScss.Models.HomeViewModel
+
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+<!doctype html>
+<html lang="en">
+
+@if ( !string.IsNullOrWhiteSpace(Model.CssPath) )
+{
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23502176-5"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-23502176-5');
+	</script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://use.fontawesome.com/dd6af3b806.js"></script>
+	<link href="https://use.fontawesome.com/dd6af3b806.css" media="all" rel="stylesheet">
+	<title>Remote Computer Access - Downtown University</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700&amp;display=swap" rel="stylesheet">
+	<link href="@Model.CssPath" type="text/css" rel="stylesheet" />
+	<style>
+		.jumbotron {
+			background-color: #fff;
+			padding-top: 0 !important;
+			padding-right: 0 !important;
+			padding-bottom: 0 !important;
+		}
+
+			.jumbotron h1 {
+				float: left;
+				margin: 0 40px 0 0;
+			}
+
+			.jumbotron h2 {
+				float: left;
+				margin: 0;
+				color: #666;
+				margin-top: 10px;
+				line-height: 130px;
+			}
+
+			.jumbotron img {
+				max-height: 100px !important;
+				margin: 15px 0;
+			}
+	</style>
+</head>
+
+<body data-spy="scroll" data-target=".sidenav" data-offset="80">
+	<div class="jumbotron">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 id="h1-title" class="page-title">
+						<img src="https://labstatspublic.blob.core.windows.net/public-in-app-message/Downtown-University-Logo-Cropped.png" alt="Downtown University" />
+					</h1>
+					<h2>Remote Computer Access</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid banner-message">
+		<div class="row">
+			<div class="col-md-12" id="div-primary-message">
+				<div class="alert alert-warning">
+					You must first connect to the University VPN before using a remote lab computer. Please visit <a href="http://example.edu/remotelabs" target="_blank">http://example.edu/remotelabs</a> for instructions.
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-4 sidenav nav sticky-top">
+				<div id="div-group-list">
+					<h4>Computer Labs</h4>
+					<ul class="flex-column nav nav-pills">
+						<li class="nav-item">
+							<a class="nav-link" href="#computer-group_1002">Art Lab</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#computer-group_1001">Business Lab</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#computer-group_1003">General Access Lab</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#computer-group_1004">Music Lab</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-9 col-sm-8">
+				<div id="div-computer-list">
+					<div class="computer-group-container" id="computer-group_1002">
+						<h3 id="heading_1002">
+							<a>Art Lab</a>
+						</h3>
+						<div class="computer-list-group" id="div-content-1002">
+							<div class="group-description text-muted">The Art Lab is for use by students enrolled in creative programs only. Software includes Adobe Creative Cloud.</div>
+							<p class="text-muted">4 computers available</p>
+							<table class="table table-condensed">
+								<tbody>
+									<tr>
+										<td>
+											<span class="fa fa-apple text-muted"></span>
+											art-lab-205
+										</td>
+										<td class="text-muted">art-lab-205.ad.example.edu</td>
+										<td class="connect-btn-container">
+											<button class="btn btn-primary"
+													onclick="showMacConnectPopup('art-lab-205', 'art-lab-205.ad.example.edu', '')">
+												Connect
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="fa fa-apple text-muted"></span>
+											art-lab-208
+										</td>
+										<td class="text-muted">art-lab-208.ad.example.edu</td>
+										<td class="connect-btn-container">
+											<button class="btn btn-primary"
+													onclick="showMacConnectPopup('art-lab-208', 'art-lab-208.ad.example.edu', '')">
+												Connect
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="fa fa-windows text-muted"></span>
+											art-lab-210
+										</td>
+										<td class="text-muted">art-lab-210.ad.example.edu</td>
+										<td class="connect-btn-container">
+											<button class="btn btn-primary"
+													onclick="showWindowsConnectPopup('art-lab-210', '1147', 'art-lab-210.ad.example.edu')">
+												Connect
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="fa fa-windows text-muted"></span>
+											art-lab-215
+										</td>
+										<td class="text-muted">art-lab-215.ad.example.edu</td>
+										<td class="connect-btn-container">
+											<button class="btn btn-primary"
+													onclick="showWindowsConnectPopup('art-lab-215', '1162', 'art-lab-215.ad.example.edu')">
+												Connect
+											</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="computer-group-container" id="computer-group_1001">
+						<h3 id="heading_1001">
+							<a>Business Lab</a>
+						</h3>
+						<div class="computer-list-group" id="div-content-1001">
+							<p class="text-muted">2 computers available</p>
+							<table class="table table-condensed">
+								<tbody>
+									<tr>
+										<td>
+											<span class="fa fa-windows text-muted"></span>
+											business-lab-118
+										</td>
+										<td class="text-muted">business-lab-118.ad.example.edu</td>
+										<td class="connect-btn-container">
+											<button class="btn btn-primary"
+													onclick="showWindowsConnectPopup('business-lab-118', '1012', 'business-lab-118.ad.example.edu')">
+												Connect
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="fa fa-windows text-muted"></span>
+											business-lab-125
+										</td>
+										<td class="text-muted">business-lab-125.ad.example.edu</td>
+										<td class="connect-btn-container">
+											<button class="btn btn-primary"
+													onclick="showWindowsConnectPopup('business-lab-125', '1099', 'business-lab-125.ad.example.edu')">
+												Connect
+											</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="computer-group-container" id="computer-group_1003">
+						<h3 id="heading_1003">
+							<a>General Access Lab</a>
+						</h3>
+						<div class="computer-list-group" id="div-content-1003">
+							<p class="text-muted">6 computers available</p>
+							<table class="table table-condensed">
+								<tbody>
+									<tr>
+										<td>
+											<span class="fa fa-windows text-muted"></span>
+											general-access-320
+										</td>
+										<td class="text-muted">general-access-320.ad.example.edu</td>
+										<td class="connect-btn-container">
+											<button class="btn btn-primary"
+													onclick="showWindowsConnectPopup('general-access-320', '1084', 'general-access-320.ad.example.edu')">
+												Connect
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="fa fa-windows text-muted"></span>
+											general-access-325
+										</td>
+										<td class="text-muted">general-access-325.ad.example.edu</td>
+										<td class="connect-btn-container">
+											<button class="btn btn-primary"
+													onclick="showWindowsConnectPopup('general-access-325', '1117', 'general-access-325.ad.example.edu')">
+												Connect
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="fa fa-windows text-muted"></span>
+											general-access-326
+										</td>
+										<td class="text-muted">general-access-326.ad.example.edu</td>
+										<td class="connect-btn-container">
+											<button class="btn btn-primary"
+													onclick="showWindowsConnectPopup('general-access-326', '1131', 'general-access-326.ad.example.edu')">
+												Connect
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="fa fa-windows text-muted"></span>
+											general-access-400
+										</td>
+										<td class="text-muted">general-access-400.ad.example.edu</td>
+										<td class="connect-btn-container">
+											<button class="btn btn-primary"
+													onclick="showWindowsConnectPopup('general-access-400', '1146', 'general-access-400.ad.example.edu')">
+												Connect
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="fa fa-windows text-muted"></span>
+											general-access-402
+										</td>
+										<td class="text-muted">general-access-402.ad.example.edu</td>
+										<td class="connect-btn-container">
+											<button class="btn btn-primary"
+													onclick="showWindowsConnectPopup('general-access-402', '1161', 'general-access-402.ad.example.edu')">
+												Connect
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="fa fa-windows text-muted"></span>
+											general-access-85
+										</td>
+										<td class="text-muted">general-access-85.ad.example.edu</td>
+										<td class="connect-btn-container">
+											<button class="btn btn-primary"
+													onclick="showWindowsConnectPopup('general-access-85', '1164', 'general-access-85.ad.example.edu')">
+												Connect
+											</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="computer-group-container" id="computer-group_1004">
+						<h3 id="heading_1004">
+							<a>Music Lab</a>
+						</h3>
+						<div class="computer-list-group" id="div-content-1004">
+							<div class="group-description text-muted">The Music Lab is for use by students enrolled in creative programs only.</div>
+							<p class="text-muted">5 computers available</p>
+							<table class="table table-condensed">
+								<tbody>
+									<tr>
+										<td>
+											<span class="fa fa-windows text-muted"></span>
+											music-lab-4
+										</td>
+										<td class="text-muted">music-lab-4.ad.example.edu</td>
+										<td class="connect-btn-container">
+											<button class="btn btn-primary"
+													onclick="showWindowsConnectPopup('music-lab-4', '1098', 'music-lab-4.ad.example.edu')">
+												Connect
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="fa fa-windows text-muted"></span>
+											music-lab-3
+										</td>
+										<td class="text-muted">music-lab-3.ad.example.edu</td>
+										<td class="connect-btn-container">
+											<button class="btn btn-primary"
+													onclick="showWindowsConnectPopup('music-lab-3', '1107', 'music-lab-3.ad.example.edu')">
+												Connect
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="fa fa-windows text-muted"></span>
+											music-lab-2
+										</td>
+										<td class="text-muted">music-lab-2.ad.example.edu</td>
+										<td class="connect-btn-container">
+											<button class="btn btn-primary"
+													onclick="showWindowsConnectPopup('music-lab-2', '1113', 'music-lab-2.ad.example.edu')">
+												Connect
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="fa fa-windows text-muted"></span>
+											music-lab-1
+										</td>
+										<td class="text-muted">music-lab-1.ad.example.edu</td>
+										<td class="connect-btn-container">
+											<button class="btn btn-primary"
+													onclick="showWindowsConnectPopup('music-lab-1', '1121', 'music-lab-1.ad.example.edu')">
+												Connect
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="fa fa-windows text-muted"></span>
+											music-lab-5
+										</td>
+										<td class="text-muted">music-lab-5.ad.example.edu</td>
+										<td class="connect-btn-container">
+											<button class="btn btn-primary"
+													onclick="showWindowsConnectPopup('music-lab-5', '1128', 'music-lab-5.ad.example.edu')">
+												Connect
+											</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="margin-top:50px;">
+			<div class="col-md-9 text-muted">
+				<p>&copy; 2020 | Provided by <a href="https://labstats.com" target="_new">LabStats</a></p>
+			</div>
+		</div>
+	</div>
+	<div id="connect-modal" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 id="h5-modal-title" class="modal-title">Connect to Computer</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+				</div>
+				<div class="bg-info text-center" style="font-size:200%;color:#fff;">
+					<span class="fa fa-laptop"></span> <span class="fa fa-long-arrow-right"></span> <span class="fa fa-laptop"></span>
+					<br>
+				</div>
+				<div class="modal-body">
+					<div id="windows-connect-instructions">
+						<p><strong>Follow these steps:</strong></p>
+						<ol>
+							<li>
+								Download and open the connection file
+								<p style="margin: 20px 0;"> <a id="btn-windows-download-now" class="btn btn-lg btn-primary" target="_new">Download</a> </p>
+							</li>
+							<li style="margin-bottom:10px;">Press the 'Connect' button</li>
+							<li id="login-message-pc">
+								<span>Log in with your username and password</span>
+								<br /><span class="text-muted font-italic">You may need to choose 'More choices' and 'Use a different account' to enter your correct username</span>
+							</li>
+						</ol>
+					</div>
+					<div id="mac-connect-instructions">
+						<p><strong>Follow these steps:</strong></p>
+						<h6>Connecting from MacOS</h6>
+						<ol>
+							<li>
+								Press the 'Connect' button
+								<p style="margin: 20px 0;"><a id="btn-mac-download-now" class="btn btn-lg btn-primary" target="_new">Connect</a></p>
+							</li>
+							<li>Log in with your username and password</li>
+						</ol>
+						<h6>Connecting from Windows</h6>
+						<ol>
+							<li style="margin-bottom:10px;">
+								Install a
+								<a id="vnc-client-link"
+								   href="https://www.realvnc.com/en/connect/download/viewer/"
+								   target="_blank">
+									VNC Viewer
+								</a>
+							</li>
+							<li>
+								Copy and paste the following address into the vnc viewer
+								<p style="margin: 20px 0;"><strong id="vnc-address-link"></strong></p>
+							</li>
+							<li>Log in with your username and password</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script>
+		//var vncClientUrl = 'Model.VncClientUrl';
+
+		function showWindowsConnectPopup(name, stationId, remoteAccessAddress) {
+			setTitleInPopup(name);
+
+			var btndownloadnow = document.getElementById("btn-windows-download-now");
+			if (btndownloadnow) {
+btndownloadnow.href = 'https://labstatspublic.blob.core.windows.net/public-in-app-message/remote-connection.rdp'			}
+
+			bindRemoteAccessAddressToPage(remoteAccessAddress);
+			showConnectModal();
+			$('#windows-connect-instructions').show();
+			$('#mac-connect-instructions').hide();
+		}
+
+		function showMacConnectPopup(name, remoteAccessAddress) {
+			setTitleInPopup(name);
+
+			if (true) {
+				var btndownloadnow = document.getElementById("btn-mac-download-now");
+				if (btndownloadnow) {
+					btndownloadnow.href = "vnc://" + remoteAccessAddress;
+				}
+
+				var vncAddressLink = document.getElementById("vnc-address-link");
+				if (vncAddressLink) {
+					vncAddressLink.innerHTML = remoteAccessAddress;
+				}
+			}
+
+			bindRemoteAccessAddressToPage(remoteAccessAddress);
+			showConnectModal();
+			$('#mac-connect-instructions').show();
+			$('#windows-connect-instructions').hide();
+		}
+
+		function setTitleInPopup(name) {
+			var h5modaltitle = document.getElementById("h5-modal-title");
+
+			if (h5modaltitle) {
+				h5modaltitle.innerHTML = "Connect to " + name;
+			}
+		}
+
+		function showConnectModal() {
+			$('#connect-modal').modal('show');
+		}
+
+		function bindRemoteAccessAddressToPage(remoteAccessAddress) {
+			var remoteAddressLink = document.getElementById("remote-address-link");
+
+			if (remoteAddressLink) {
+				remoteAddressLink.innerHTML = remoteAccessAddress;
+			}
+		}
+	</script>
+</body>
+}
+else
+{
+<body>
+	<a href="/less">Less Page</a>
+	<br />
+	<a href="/scss">Scss Page</a>
+</body>
+}
+</html>

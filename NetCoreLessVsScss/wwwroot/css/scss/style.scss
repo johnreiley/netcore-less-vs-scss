@@ -1,0 +1,42 @@
+﻿@import "./partials/variables";
+@import "./partials/page-header";
+@import "./partials/navigation";
+@import "./partials/computer-groups";
+@import "./partials/buttons";
+@import "./partials/media-queries";
+
+// GENERAL STYLES ---------------------------------------------//
+body {
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+
+	& > .container {
+		margin-top: 2.5rem;
+	}
+}
+
+a {
+	color: $link-blue;
+}
+
+h1 {
+	font-weight: 500;
+	margin-bottom: 0;
+	font-size: 2rem;
+}
+
+h2 {
+	font-weight: 300;
+	font-size: 1.25rem;
+	text-transform: uppercase;
+}
+
+h3 {
+	margin-bottom: 0;
+	line-height: 1.75rem;
+}
+
+h4 {
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+

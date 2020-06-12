@@ -1,0 +1,46 @@
+.table td,
+.table th {
+	vertical-align: middle;
+}
+
+.computer-group-container {
+	padding-top: 3rem;
+	margin-top: -3rem;
+	margin-bottom: 3rem;
+}
+
+.computer-list-group {
+	.group-description {
+		margin-bottom: 10px;
+	}
+	p.text-muted {
+		font-weight: 300;
+		font-size: 1.15em;
+		color: #4d4d4d !important;
+		margin-bottom: .75rem;
+	}
+	.table {
+		margin-bottom: 2rem;
+	}
+}
+
+.computer-list-group .table tr {
+	border-top: 1px solid #dee2e6;
+	transition: all ease-in-out .25s;
+	&:hover {
+		background: #f6fbff;
+		box-shadow: inset 0 -0.5px #cfe5f5, inset 0 0.5px 0 #cfe5f5;
+		transition: all ease-in-out .25s;
+		border-top: 1px solid #cfe5f5;
+	}
+	td {
+		border-top: 0;
+		&:first-child span {
+			margin: 0 .5rem 0 .15rem;
+			vertical-align: base;
+		}
+	}
+	.connect-btn-container {
+		text-align: right;
+	}
+}
