@@ -8,10 +8,8 @@
 3. Click on the arrow dropdown next to `Gulpfile.js` in the Task Runner Explorer window. It will reaveal the following structure:
 ```
 Gulpfile.js
- |
- +---- Tasks
-        |
-        +---- build
+ └── Tasks
+        └── build
 ```
 4. Right click `build` and click "**Before Build**" under "**Bindings**". Now anytime the project is built, the Less and Scss files will be transpiled.
 
